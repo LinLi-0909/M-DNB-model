@@ -1,13 +1,4 @@
 #  M-DNB Factors Orchestrate Cell Fate Determination at Tipping Points during Mesendodermal Differentiation of Human Embryonic Stem Cells 
-## Contents
-
-- [Overview](#overview)
-- [Installation Guide](#installation-guide)
-- [Tutorial](#tutorial)
-- [License](./LICENSE)
-- [Citation](#citation)
-- [Contact](#Contact)
-
 ## Overview
 ## Contents
 
