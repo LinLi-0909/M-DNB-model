@@ -3,7 +3,7 @@
 ## Contents
 
 - [Overview](#overview)
-- [M-DNB analysis Guide](#M-DNB analysis Guide)
+- [M-DNB analysis Guide](./LICENSE)
 - [License](./LICENSE)
 - [Citation](#citation)
 - [Contact](#Contact)
