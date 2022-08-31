@@ -1,6 +1,5 @@
 clc
 close all
-clear
 %% import links
 ex=importdata('9606.protein.links.v10.txt');
 links=ex.textdata(2:end,1:2);
@@ -49,7 +48,7 @@ x=[1:size(m)];y=[1:6];
 mesh(y,x,allCI(m,:))
 [top50CI,QI]=Get_Critical_Indicators(timeIdx,CI,50);
 
-%% plot 
+%% plot
 
     lw = 1.2;
     mk = '.';
