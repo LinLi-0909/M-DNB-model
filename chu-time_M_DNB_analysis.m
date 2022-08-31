@@ -1,6 +1,5 @@
 clc
 close all
-%% import links
 ex=importdata('9606.protein.links.v10.txt');
 links=ex.textdata(2:end,1:2);
 k=1;
@@ -20,8 +19,6 @@ for i=1:size(links,1)-1
 end
 whole(:,3)=importdata('towhole.csv');
 clear ex;clear links;
-
-%% import all data
 alldata=importdata('GSE75748_sc_time_course_ec.csv');
 data=alldata.data;
 feature=alldata.textdata(2:end,1);
@@ -48,8 +45,8 @@ x=[1:size(m)];y=[1:6];
 mesh(y,x,allCI(m,:))
 [top50CI,QI]=Get_Critical_Indicators(timeIdx,CI,50);
 
-%% plot
 
+%plot figure
     lw = 1.2;
     mk = '.';
     ms = 16;
