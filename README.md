@@ -54,8 +54,8 @@ network(:,3)=importdata('network.csv');
 CI contains CI value, sd, PCCin and PCCout for each gene module at each time point.
 And The CI of Chu-time dataset can be downloaded at https://github.com/LinLi-0909/M-DNB-model/blob/main/CI.mat <br />
 ### 3. Identify DNB genes at critical points
- [topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);
- m is the top m DNB genes with CI in given critical point.
+ **[topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);**
+ m is the top m-DNB genes with CI value in given critical point, e.g. m=50,100,150. users can also set the parameter as own request.
 ### 4. Find M-DNB fatcors (TFs of DNB genes)
 We can find TFs of DNB genes based on IPA.
 
