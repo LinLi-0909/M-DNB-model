@@ -19,8 +19,8 @@ The PPI network of human can be downloaded from https://github.com/LinLi-0909/M-
 ### 2. Identify critical points and CI values of each gene module
 **CI = Get_CI(data,time_Idx,feature,network);** <br />
 
-**data** is time-series scRNA-seq dataset; <br /> 
-genes*cells, e.g. Chu-time dataset(download from https://www.ncbi.nlm.nih.gov/geo/download/acc=GSE75748&format=file&file=GSE75748%5Fsc%5Ftime%5Fcourse%5Fec%2Ecsv%2Egz, or https://github.com/LinLi-0909/M-DNB-model/blob/main/GSE75748_sc_time_course_ec.csv.gz).<br /> 
+**data** is time-series normailized scRNA-seq dataset(tpm,fpkm, or rpkm); <br /> 
+genes*cells <br /> e.g. Chu-time dataset(download from https://www.ncbi.nlm.nih.gov/geo/download/acc=GSE75748&format=file&file=GSE75748%5Fsc%5Ftime%5Fcourse%5Fec%2Ecsv%2Egz, or https://github.com/LinLi-0909/M-DNB-model/blob/main/GSE75748_sc_time_course_ec.csv.gz).<br /> 
 ![image](https://user-images.githubusercontent.com/63344240/200508091-bc34407b-5bfa-4942-bfa6-e53e28df450d.png)<br /> 
 **time_Idx** is time points of samples;<br /> 
 e.g Chu-time dataset contains 6 time points.The mat file can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/timeIdx.mat. User can input time_Idx as below: <br />
