@@ -57,14 +57,15 @@ And The CI of Chu-time dataset can be downloaded at https://github.com/LinLi-090
  **[topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);**<br />
 **Input:** <br />
  m is the top m-DNB genes with CI value in given critical point, e.g. m=50,100,150. users can also set the parameter as own request.<br />
- timeIdx and CI can be obtained from Step1 and Step2.
+ timeIdx and CI can be obtained from Step1 and Step2.<br />
  **Output:** <br />
  topmCI consists of genes with top m CI value at each time point.
  topmCI can be downloaded at 
  QI is the mean of top m CI value.
  
-### 4. Find M-DNB fatcors (TFs of DNB genes)
-We can find TFs of DNB genes based on IPA.
+### Step4. Find M-DNB fatcors (TFs of DNB genes)
+We can find M-DNB fatcors (TFs of DNB genes) based on IPA.
+User can also investage the M-DNB factors (upstream regulator) based on publised datasets.
 
 ## Contact
 Please contact us:  
