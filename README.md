@@ -60,7 +60,7 @@ And The CI of Chu-time dataset can be downloaded at https://github.com/LinLi-090
  timeIdx and CI can be obtained from Step1 and Step2.<br />
  **Output:** <br />
  topmCI consists of genes with top m CI value at each time point.
- topmCI can be downloaded at 
+ topmCI can be downloaded at https://github.com/LinLi-0909/M-DNB-model/blob/main/top50CI.mat<br />
  QI is the mean of top m CI value.
  
 ### Step4. Find M-DNB fatcors (TFs of DNB genes)
