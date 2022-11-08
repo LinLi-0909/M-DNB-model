@@ -18,7 +18,7 @@ First, we should obtain the network from PPI network from STRING (https://cn.str
 The PPI network of human can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/9606.protein.links.v10.zip.
 ### 2. Identify critical points and CI values of each gene module
 **CI = Get_CI(data,time_Idx,feature,network);** <br />
-
+**Input:**
 **data** is time-series normailized scRNA-seq dataset(tpm,fpkm, or rpkm); <br /> 
 genes*cells <br /> e.g. Chu-time dataset(download from https://www.ncbi.nlm.nih.gov/geo/download/acc=GSE75748&format=file&file=GSE75748%5Fsc%5Ftime%5Fcourse%5Fec%2Ecsv%2Egz, or https://github.com/LinLi-0909/M-DNB-model/blob/main/GSE75748_sc_time_course_ec.csv.gz).<br /> 
 ![image](https://user-images.githubusercontent.com/63344240/200508091-bc34407b-5bfa-4942-bfa6-e53e28df450d.png)<br /> 
@@ -50,7 +50,9 @@ for i=1:size(links,1)-1
 end
 network(:,3)=importdata('network.csv');
 ```
-
+**Output:** <br />
+CI contains CI value, sd, PCCin and PCCout for each gene module at each time point.
+And The CI of Chu-time dataset can be downloaded at 
 ### 3. Identify DNB genes at critical points
  [topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);
  m is the top m DNB genes with CI in given critical point.
