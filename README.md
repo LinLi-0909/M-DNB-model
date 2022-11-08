@@ -27,7 +27,7 @@ e.g Chu-time dataset contains 6 time points.The mat file can be downloaded from 
 
 ![image](https://user-images.githubusercontent.com/63344240/200511593-cda817ff-8ada-4033-9839-0b803e68e7f3.png)
 
-**feature** is genes in dataset.<br /> e.g.row name of Chu-time dataset. <br />
+**feature** is gene list in dataset.<br /> e.g.row name of Chu-time dataset. <br />
 **network** is PPI network obtained from STRING. <br />
 User can obtain network using the following code (matlab) and PPI network from STRING:
 ```
