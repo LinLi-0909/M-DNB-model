@@ -30,6 +30,26 @@ e.g Chu-time dataset contains 6 time points.The mat file can be downloaded from 
 **feature** is genes in dataset.<br /> e.g.row name of Chu-time dataset. <br />
 **network** is PPI network obtained from STRING. <br />
 User can obtain network using the following code (matlab) and PPI network from STRING:
+```
+ex=importdata('9606.protein.links.v10.txt');
+links=ex.textdata(2:end,1:2);
+k=1;
+network{1,1}=links{1,1};
+network{1,2}{1,1}=links{1,2};
+j=1;
+for i=1:size(links,1)-1
+    if strcmpi(links{i,1},links{i+1,1})
+       network{k,2}{j+1,1}=links{i+1,2};
+        j=j+1;
+    else
+        j=1;
+        k=k+1;
+       network{k,1}=links{i+1,1};
+       network{k,2}{1,1}=links{i+1,2};
+    end
+end
+network(:,3)=importdata('network.csv');
+```
 
 ### 3. Identify DNB genes at critical points
  [topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);
