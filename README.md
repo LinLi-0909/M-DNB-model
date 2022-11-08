@@ -13,6 +13,8 @@ The generation of ectoderm, mesoderm, and endoderm layers is the most critical b
 The stage-specific and essential roles of M-DNB factors in the cell-fate decision were confirmed by the differentiation experiments. We demonstrate that before the tipping points, M-DNB factors are able to maintain the cell states and orchestrate cell fate determination during hESC (ES)-to-ME and ME-to-DE differentiation processes, which not only leads to better understanding of endodermal specification of hESCs but also reveals the power of the M-DNB model to identify critical transition points with their key factors in diverse biological processes including cell differentiation and transdifferentiation dynamics.<br /> 
 ![image](https://user-images.githubusercontent.com/63344240/200559155-2d44fe9f-968a-415d-b2d0-a8e2dcb54395.png)
 
+##Install
+M-DNB model is designed based on matlab.
 
 ## M-DNB analysis Guide
 ### Step1. Get network from PPI network
