@@ -18,13 +18,16 @@ First, we should obtain the network from PPI network from STRING (https://cn.str
 The PPI network of human can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/9606.protein.links.v10.zip.
 ### 2. Identify critical points and CI values of each gene module
 **CI = Get_CI(data,time_Idx,feature,network);** <br />
-**data is time-series scRNA-seq dataset;** <br /> genes*cells, e.g. Chu-time dataset(download from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75748&format=file&file=GSE75748%5Fsc%5Ftime%5Fcourse%5Fec%2Ecsv%2Egz).<br />
+data is time-series scRNA-seq dataset; <br /> 
+genes*cells, e.g. Chu-time dataset(download from https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75748&format=file&file=GSE75748%5Fsc%5Ftime%5Fcourse%5Fec%2Ecsv%2Egz).
 ![image](https://user-images.githubusercontent.com/63344240/200508091-bc34407b-5bfa-4942-bfa6-e53e28df450d.png)
-**time_Idx is time points of samples;** <br /> e.g Chu-time dataset contains 6 time points.The mat file can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/timeIdx.mat
+time_Idx is time points of samples;<br /> 
+e.g Chu-time dataset contains 6 time points.The mat file can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/timeIdx.mat <br />
+
 ![image](https://user-images.githubusercontent.com/63344240/200511593-cda817ff-8ada-4033-9839-0b803e68e7f3.png)
 
-**feature is genes in dataset.** <br /> e.g.row name of Chu-time dataset.
-**network is PPI network obtained from STRING.** 
+feature is genes in dataset.<br /> e.g.row name of Chu-time dataset. <br />
+network is PPI network obtained from STRING. <br />
 
 ### 3. Identify DNB genes at critical points
  [topmCI,QI]=Get_Critical_Indicators(timeIdx,CI,m);
