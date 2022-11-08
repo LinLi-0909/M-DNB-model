@@ -1,4 +1,4 @@
-function [CI] = Get_CI(data,time_Idx,feature,whole)
+function [CI] = Get_CI(data,time_Idx,feature,network)
 %% deal with the data
 for t=1:size(timeIdx,1)
     data(:,timeIdx{t,2})=zscore(data(:,timeIdx{t,2}),0,2); 
@@ -12,7 +12,7 @@ end
 i=0;
 for j=1:size(feature,1)
     k=0;
-    k=find(strcmp(feature{j,1},whole(:,3)));
+    k=find(strcmp(feature{j,1},network(:,3)));
     if k~=0
         i=i+1;
         idx(i,1)=j;
@@ -36,23 +36,23 @@ end
 %% find modules
 for i=1:size(idx,1)
     k=0;
-    k=find(strcmp(feature{idx(i),1},whole(:,3)));
+    k=find(strcmp(feature{idx(i),1},network(:,3)));
     modules{i,1}=feature{idx(i),1}; 
     modules{i,2}{1,1}=feature{idx(i),1};
     modidx{i,1}(1,1)=idx(i);
     modidx{i,1}(1,2)=find(strcmp(modules{i,2}{1,1},feature(idx)));
     n=1;
     p=0;
-    for m=1:size(whole{k,2},1)
-        p=find(strcmp(whole{k,2}{m,1},whole(:,1)));
-        q=find(strcmp(whole{p,3},feature(idx)));
+    for m=1:size(network{k,2},1)
+        p=find(strcmp(network{k,2}{m,1},network(:,1)));
+        q=find(strcmp(network{p,3},feature(idx)));
         if ~isempty(q)
             if allpcc{1,1}(q,i)<=0.2&&allpcc{2,1}(q,i)<=0.2&&allpcc{3,1}(q,i)<=0.2...
                     &&allpcc{4,1}(q,i)<=0.2&&allpcc{5,1}(q,i)<=0.2&&...
                     allpcc{6,1}(q,i)<=0.2
             else
                 n=n+1;
-                modules{i,2}{n,1}=whole{p,3};
+                modules{i,2}{n,1}=network{p,3};
                 modidx{i,1}(n,1)=find(strcmp(modules{i,2}{n,1},feature));
                 modidx{i,1}(n,2)=find(strcmp(modules{i,2}{n,1},feature(idx)));
             end
@@ -82,8 +82,8 @@ for t=1:size(timeIdx,1)
         pccall=sum(temp(1,2:end));
         m=size(temp,1)-1;
         for j=2:size(modules{i,2},1)-1
-            q=find(strcmp(modules{i,2}{j,1},whole(:,3)));
-            TF=ismember(modules{i,2}(j+1:size(modules{i,2},1),1),whole{q,2});
+            q=find(strcmp(modules{i,2}{j,1},network(:,3)));
+            TF=ismember(modules{i,2}(j+1:size(modules{i,2},1),1),network{q,2});
             p=find(TF==1);
             if ~isempty(p)
                pccall=pccall+sum(temp(j,p+j));
