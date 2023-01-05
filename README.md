@@ -68,6 +68,8 @@ And The CI of Chu-time dataset can be downloaded at https://github.com/LinLi-090
 ### Step4. Find M-DNB fatcors (TFs of DNB genes)
 We can find M-DNB fatcors (TFs of DNB genes) based on IPA.
 User can also investage the M-DNB factors (upstream regulator) based on publised datasets.
+## Citation
+https://doi.org/10.1016/j.xinn.2022.100364
 
 ## Contact
 Please contact us:  
