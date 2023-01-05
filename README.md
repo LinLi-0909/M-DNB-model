@@ -18,7 +18,6 @@ The stage-specific and essential roles of M-DNB factors in the cell-fate decisio
 M-DNB model is designed based on matlab.
 ### Step1. Get network from PPI network
 First, we should obtain the network from PPI network from STRING (https://cn.string-db.org/).
-The PPI network of human can be downloaded from https://github.com/LinLi-0909/M-DNB-model/blob/main/9606.protein.links.v10.zip.
 ### Step2. Identify critical points and CI values of each gene module
 **CI = Get_CI(data,time_Idx,feature,network);** <br />
 **Input:**
