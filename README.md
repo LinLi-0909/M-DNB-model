@@ -50,7 +50,7 @@ for i=1:size(links,1)-1
        network{k,2}{1,1}=links{i+1,2};
     end
 end
-network(:,3)=importdata('towhole.csv');
+network(:,3)=importdata('towhole.csv');%%towhole is gene name of network(:,1). To obtain towhole.csv, user need convert gene id to gene name by various tools, such as g:profiler.  
 ```
 **Output:** <br />
 CI: CI contains 4 columns for each gene module at each time point,which are  CI value, sd, PCC_in and PCC_out,respectively.<br />
